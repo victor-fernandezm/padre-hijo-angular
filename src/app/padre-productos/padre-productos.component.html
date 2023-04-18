@@ -1,0 +1,7 @@
+<label for="pid">Id:</label><input disabled type="number" name="" id="pid" [(ngModel)]="currentProduct.id"><br><label for="pname">Nombre:</label><input type="text" id="pname" [(ngModel)]="currentProduct.name"><br><label for="pqty">Cantidad:</label><input type="number" name="" id="pqty" [(ngModel)]="currentProduct.quantity" min="0"><br><label for="pprice">Precio:</label><input type="number" name="" id="pprice" [(ngModel)]="currentProduct.price" min="0"><br><label for="ptype">Tipo de producto:</label><select name="" id="" [(ngModel)]="currentProduct.type">
+    <option value="{{pair[0]}}" *ngFor="let pair of options">{{pair[1]}}</option>
+</select>
+<br>
+<button (click)="addProduct()">Añadir producto</button>
+
+<app-hijo-productos [products]="products"></app-hijo-productos>
