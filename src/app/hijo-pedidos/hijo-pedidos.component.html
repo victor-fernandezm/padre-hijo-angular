@@ -1,0 +1,7 @@
+<label for="idped">ID Pedido:</label><input type="number" name="" id="idped" [(ngModel)]="currentPedido.idPedido"><br>
+<label for="idcli">ID Cliente:</label><input type="number" name="" id="idcli" [(ngModel)]="currentPedido.idCliente"><br>
+<label for="nombrecli">Nombre Cliente:</label><input type="text" id="nombrecli" [(ngModel)]="currentPedido.nombreCliente"><br>
+<label for="productos">Total productos:</label><input type="number" name="" id="productos" [(ngModel)]="currentPedido.totalProductos"><br>
+<label for="importe">Importe Total:</label><input type="number" name="" id="importe" [(ngModel)]="currentPedido.importeTotal"><br>
+
+<button (click)="addPedido()">Añadir pedido</button>

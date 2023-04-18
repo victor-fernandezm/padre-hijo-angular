@@ -1,0 +1,26 @@
+table {
+    border-spacing: 0;
+}
+
+table td:not(:last-child), table th:not(:last-child) {
+    border-right: 0;
+}
+
+table tr:not(:last-child) td, table tr:not(:last-child) th {
+    border-bottom: 0;
+}
+
+table th, table td {
+    border: 2px solid #003f65;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background: #205c72;
+    color: #fff;
+}
+
+table td {
+    background: #6292a3;
+}

@@ -1,0 +1,18 @@
+<app-hijo-pedidos (pedidoEvent)="getPedidos($event)"></app-hijo-pedidos><br>
+
+<table>
+    <tr>
+        <th>ID Pedido</th>
+        <th>ID Cliente</th>
+        <th>Nombre Cliente</th>
+        <th>Total productos</th>
+        <th>Importe Total</th>
+    </tr>
+    <tr *ngFor="let p of pedidos">
+        <td>{{p.idPedido}}</td>
+        <td>{{p.idCliente}}</td>
+        <td>{{p.nombreCliente}}</td>
+        <td>{{p.totalProductos}}</td>
+        <td>{{p.importeTotal}}</td>
+    </tr>
+</table>
