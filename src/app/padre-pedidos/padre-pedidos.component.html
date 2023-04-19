@@ -8,11 +8,16 @@
         <th>Total productos</th>
         <th>Importe Total</th>
     </tr>
-    <tr *ngFor="let p of pedidos">
-        <td>{{p.idPedido}}</td>
-        <td>{{p.idCliente}}</td>
-        <td>{{p.nombreCliente}}</td>
-        <td>{{p.totalProductos}}</td>
-        <td>{{p.importeTotal}}</td>
+    <tr *ngIf="pedidos.length == 0;else listado">
+        <td colspan="5">No hay pedidos</td>
     </tr>
+    <ng-template #listado>
+        <tr *ngFor="let p of pedidos">
+            <td>{{p.idPedido}}</td>
+            <td>{{p.idCliente}}</td>
+            <td>{{p.nombreCliente}}</td>
+            <td>{{p.totalProductos}}</td>
+            <td>{{p.importeTotal}}</td>
+        </tr>
+    </ng-template>
 </table>

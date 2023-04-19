@@ -6,11 +6,16 @@
         <th>Precio</th>
         <th>Tipo</th>
     </tr>
-    <tr *ngFor="let p of products">
-        <td>{{p.id}}</td>
-        <td>{{p.name}}</td>
-        <td>{{p.quantity}}</td>
-        <td>{{p.price}}</td>
-        <td>{{options[p.type][1]}}</td>
+    <tr *ngIf="products.length == 0;else listado">
+        <td colspan="5">No hay productos</td>
     </tr>
+    <ng-template #listado>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.price}}</td>
+            <td>{{options[p.type][1]}}</td>
+        </tr>
+    </ng-template>
 </table>
